@@ -16,9 +16,9 @@ def main():
 	print(f"{plant1.name}: {plant1.height}cm, {plant1.age} days old")
 	print(f"{plant2.name}: {plant2.height}cm, {plant2.age} days old")
 	print(f"{plant3.name}: {plant3.height}cm, {plant3.age} days old")
+	print(f"{plant4.name}: {plant4.height}cm, {plant4.age} days old")
 	print("=== End of Program ===")
 
 
 if __name__ == "__main__":
 	main()
-
