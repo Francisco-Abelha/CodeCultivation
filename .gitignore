@@ -1,3 +1,10 @@
+# macOS
+.DS_Store
+
+# Subject files
+*.pdf
+*.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
