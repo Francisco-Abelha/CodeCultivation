@@ -1,37 +1,35 @@
 #!/usr/bin/env python3
 
-from ex1.ft_garden_data import *
+class Plant:
+	def __init__(self, name: str, height: float, age_days: int, growth_rate: float) -> None:
+		self.name = name
+		self.height = height
+		self.age_days = age_days
+		self.growth_rate = growth_rate
+	
+	def show(self) -> None:
+		print(f"{self.name}: {self.height}cm, {self.age_days} days old")
 
-def grow():
-	plant1.height += 1.2
-	plant2.height += 0.5
-	plant3.height += 2
+	def grow(self) -> None:
+		self.height += self.growth_rate
 
+	def age(self) -> None:
+		self.age_days += 1
 
-def age():
-	plant1.age += 1
-	plant2.age += 1
-	plant3.age += 1
-
-def loop():
-	count = 0
-	while (count < 7):
-		grow()
-		age()
+def main() -> None:
+	plant1 = Plant("Sunflower", 180, 95, 1.5)
+	count = 1
+	plant_height = plant1.height
+	print("=== Garden Plant Growth ===")
+	plant1.show()
+	while (count <= 7):
+		print(f"=== Day {count} ===")
+		plant1.grow()
+		plant1.age()
+		plant1.show()
 		count += 1
-
-def show_info():
-	print(f"{plant1.name}: {plant1.height}cm, {plant1.age} days old")
-	print(f"{plant2.name}: {plant2.height}cm, {plant2.age} days old")
-	print(f"{plant3.name}: {plant3.height}cm, {plant3.age} days old")
-
-
-def main():
-	print("=== Day 1 ===")
-	show_info()
-	loop()
-	print("=== Day 7 ===")
-	show_info()
+	plant_growth_done = plant1.height - plant_height
+	print(f"Growth this week: {plant_growth_done}cm")
 
 if __name__ == "__main__":
 	main()
