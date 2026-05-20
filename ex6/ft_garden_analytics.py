@@ -110,7 +110,7 @@ class Tree(Plant):
     ) -> None:
         super().__init__(name, height, age_days)
         self._trunk_diameter = trunk_diameter
-        self._stats = Tree.Stats()
+        self._stats: Tree.Stats = Tree.Stats()
 
     def produce_shade(self) -> None:
         print(f"Tree {self._name} now produces a shade of "
