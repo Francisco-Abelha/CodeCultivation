@@ -58,7 +58,7 @@ class Plant:
             self._show = 0
 
         def display(self, name: str) -> None:
-            print(f"[Statistics for {name}]")
+            print(f"[statistics for {name}]")
             print(f"Stats: {self._grow} grow,"
                   f" {self._age} age, {self._show} show")
 
@@ -89,7 +89,6 @@ class Seed(Flower):
             self, name: str, height: float, age_days: int, color: str
     ) -> None:
         super().__init__(name, height, age_days, color)
-        self._stats = Seed.Stats()
         self._num_seeds = 0
 
     def show(self) -> None:
@@ -99,10 +98,6 @@ class Seed(Flower):
     def bloom(self) -> None:
         super().bloom()
         self._num_seeds = 42
-
-    class Stats(Plant.Stats):
-        def __init__(self) -> None:
-            super().__init__()
 
 
 class Tree(Plant):
@@ -131,7 +126,7 @@ class Tree(Plant):
             super().__init__()
             self._shade_calls = 0
 
-        def display(self, name: str):
+        def display(self, name: str) -> None:
             super().display(name)
             print(f"{self._shade_calls} shade")
 

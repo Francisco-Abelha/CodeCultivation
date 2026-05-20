@@ -47,7 +47,7 @@ def main() -> None:
     print("Plant created: ", end="")
     plant1.show()
 
-    plant1.set_height(200)
+    plant1.set_height(200.0)
     plant1.set_age(19)
 
     plant1.set_age(-2)

@@ -24,7 +24,7 @@ def main() -> None:
     plant2 = Plant("Tomato plant", 120, 70, 0.1)
     plant3 = Plant("Basil", 35, 40, 2.1)
     plant4 = Plant("Oak Sapling", 150, 320, 8.6)
-    plant5 = Plant("Rose", 10, 1, 0.2)
+    plant5 = Plant("Rose", 10.0, 1, 0.2)
 
     print("=== Plant Factory Output ===")
     print("Created: ", end="")
